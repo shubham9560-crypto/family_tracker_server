@@ -126,14 +126,8 @@ app.patch("/user/location", async (req, res) => {
                 coordinates: [lon, lat]
 
             },
-            heading:{
-                type:Number,
-                default:0
-            },
-            speed:{
-                type:Number,
-                default:0
-            },
+            heading:heading,
+            speed:speed,
             lastUpdated: new Date()
 
         },
