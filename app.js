@@ -119,12 +119,20 @@ app.post("/family/join", async (req, res) => {
 app.patch("/user/location", async (req, res) => {
     try {
 
-        const { userId, lat, lon, } = req.body;
+        const { userId, lat, lon,speed,heading } = req.body;
         const user = await User.findByIdAndUpdate(userId, {
             location: {
                 type: "Point",
                 coordinates: [lon, lat]
 
+            },
+            heading:{
+                type:Number,
+                default:0
+            },
+            speed:{
+                type:Number,
+                default:0
             },
             lastUpdated: new Date()
 
