@@ -14,6 +14,15 @@ const userSchema = new mongoose.Schema({
         required: true
     },
 
+    heading: {
+        type: Number,
+        default: 0
+    },
+
+    speed:{
+        type:Number,default:0
+    },
+
     location: {
         type: {
             type: String,
