@@ -128,7 +128,7 @@ app.patch("/user/location", async (req, res) => {
             },
             heading:heading,
             speed:speed,
-            lastUpdated: new Date()
+            lastUpdate: new Date()
 
         },
 
